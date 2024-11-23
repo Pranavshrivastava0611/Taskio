@@ -4,6 +4,7 @@ import { auth, currentUser } from "@clerk/nextjs/server";
 import { Liveblocks } from "@liveblocks/node";
 import { ConvexHttpClient } from "convex/browser";
 import { NextRequest, NextResponse } from "next/server";
+import { useRouter } from "next/navigation";
 
 const convex = new ConvexHttpClient(process.env.NEXT_PUBLIC_CONVEX_URL!);
 
@@ -12,6 +13,7 @@ const liveblocks = new Liveblocks({
 });
 
 export async function POST(request: NextRequest): Promise<NextResponse> {
+  const router = useRouter();
   try {
     // Check if the user is authenticated
     const authorization = await auth();

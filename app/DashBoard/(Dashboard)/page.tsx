@@ -3,6 +3,7 @@
 import { useOrganization } from "@clerk/clerk-react";
 import { BoardList } from "./_components/BoardList";
 import EmptyOrg from "./_components/EmptyOrg";
+import { useRouter } from "next/navigation";
 
 
 interface DashboardProps {
@@ -14,7 +15,9 @@ interface DashboardProps {
 export default function Home({
   searchParams
 } : DashboardProps) {
+
  const {organization} = useOrganization();
+
  
   return (
     <>
