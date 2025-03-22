@@ -25,7 +25,7 @@ const OrgSidebar = () => {
         <div className="flex gap-x-3 items-center">
           <Image src={"/logo.svg"} alt="logo" height={60} width={60} />
           <span className={cn("font-bold text-2xl text-black", font.className)}>
-            FocusHub
+            Taskio
           </span>
         </div>
       </Link>

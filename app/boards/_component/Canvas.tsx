@@ -34,6 +34,7 @@ import { SelectionTools } from "./SelectionTools";
 import { update } from "@/convex/board";
 import { Path } from "./path";
 import { colorToCss } from "@/lib/utils";
+import { Id } from "@/convex/_generated/dataModel";
 
 const MAX_LAYERS = 100;
 interface CanvasProps {
@@ -349,7 +350,6 @@ export const Canvas = ({ boardId }: CanvasProps) => {
   return (
     <main className="h-full w-full relative bg-neutral-100 touch-none">
       {/* <Info boardId={boardId}/> */}
-
       <Participants />
       <Toolbar
         canvasState={canvasState}

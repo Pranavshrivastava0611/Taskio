@@ -62,6 +62,9 @@ body {
     --chart-4: 280 65% 60%;
     --chart-5: 340 75% 55%;
   }
+  .glow {
+    text-shadow: 0 0 10px #00ffff, 0 0 20px #00ffff, 0 0 40px #00ffff;
+  }
 }
 
 @layer base {
@@ -71,4 +74,5 @@ body {
   body {
     @apply bg-background text-foreground;
   }
+ 
 }

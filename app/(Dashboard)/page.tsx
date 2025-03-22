@@ -3,7 +3,9 @@
 import { useOrganization } from "@clerk/clerk-react";
 import { BoardList } from "./_components/BoardList";
 import EmptyOrg from "./_components/EmptyOrg";
+import { useState } from "react";
 import { useRouter } from "next/navigation";
+
 
 
 interface DashboardProps {
@@ -17,7 +19,16 @@ export default function Home({
 } : DashboardProps) {
 
  const {organization} = useOrganization();
+ const [checkRedirect,setRedirect]= useState<boolean>(false);
+ const router = useRouter();
 
+
+ if(!checkRedirect){
+  setRedirect(true);
+  router.push("/auth");
+ }
+
+ 
  
   return (
     <>

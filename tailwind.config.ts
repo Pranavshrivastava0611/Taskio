@@ -7,6 +7,7 @@ export default {
     "./components/**/*.{js,ts,jsx,tsx,mdx}",
     "./app/**/*.{js,ts,jsx,tsx,mdx}",
   ],
+  
   theme: {
   	extend: {
   		colors: {
@@ -49,14 +50,28 @@ export default {
   				'3': 'hsl(var(--chart-3))',
   				'4': 'hsl(var(--chart-4))',
   				'5': 'hsl(var(--chart-5))'
-  			}
+  			},
+			  glow: '#5c6ac4', // Main glowing color
+			  dark: '#1a1a2e', // Background
+			  light: '#ffffff', // Text color
   		},
   		borderRadius: {
   			lg: 'var(--radius)',
   			md: 'calc(var(--radius) - 2px)',
   			sm: 'calc(var(--radius) - 4px)'
-  		}
+  		},
+		  boxShadow: {
+			neon: '0 0 10px #5c6ac4, 0 0 20px #5c6ac4',
+		  },
+		  animation: {
+			glow: 'pulse 1.5s infinite',
+			pulse : 'pulse 3s infinite'
+		  },
+		  blur: {
+			"3xl": "64px",
+		  },
   	}
   },
+  
   plugins: [require("tailwindcss-animate")],
 } satisfies Config;

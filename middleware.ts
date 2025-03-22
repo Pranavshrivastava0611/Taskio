@@ -1,10 +1,24 @@
+"use server"
+
 import { clerkMiddleware,createRouteMatcher } from '@clerk/nextjs/server'
+import { NextResponse } from 'next/server';
+import { auth } from '@clerk/nextjs/server';
 
 
-const isProtectedRoute = createRouteMatcher(['/'])
+const isProtectedRoute = createRouteMatcher(['/']);
+
 
 export default clerkMiddleware(async (auth, req) => {
     if (isProtectedRoute(req)) await auth.protect() 
+    
+      const url = req.nextUrl.clone();
+      if (!auth.name){
+        // Redirect unauthenticated users to the "/auth" page
+        url.pathname = "/auth";
+        return NextResponse.redirect(url);
+      }
+    
+      return NextResponse.next();
   })
 
 export const config = {

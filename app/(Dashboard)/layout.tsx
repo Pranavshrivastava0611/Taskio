@@ -3,7 +3,7 @@
 import Index from "./_components/Sidebar";
 import OrgSidebar from "./_components/OrgSidebar";
 import Navbar from "./_components/Navbar";
-import { LiveblocksProvider } from "@liveblocks/react";
+
 
 interface layoutProps{
     children : React.ReactNode;

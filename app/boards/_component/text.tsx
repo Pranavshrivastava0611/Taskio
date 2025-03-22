@@ -17,7 +17,7 @@ interface TextProps {
 }
 
 const calculateFontSize = (width: number, height: number) => {
-  const maxFontSize = 96;
+  const maxFontSize = 80;
   const scaleFactor = 0.5;
   const fontSizeBasedOnHeight = height * scaleFactor;
   const fontSizeBasedOnWidth = width * scaleFactor;

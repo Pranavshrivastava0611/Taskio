@@ -36,7 +36,6 @@ export default function RootLayout({
           <ModalProvider/>
          <Toaster/>
         {children}
-       
         </ConvexclerKProvider>
       </body>
     </html>
