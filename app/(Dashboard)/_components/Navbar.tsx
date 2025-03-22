@@ -7,8 +7,7 @@ import { OrganizationSwitcher } from "@clerk/nextjs";
 import InviteButton from "./invite-button";
 import { useRouter } from "next/navigation";
 import { useClerk } from "@clerk/nextjs";
-import { SignedOut } from "@clerk/nextjs";
-import { SignOutButton } from "@clerk/nextjs";
+
 
 
 

@@ -13,7 +13,7 @@ interface DashboardProps {
   };
 }
 
-export default function Home({ searchParams }: DashboardProps) {
+export default function Home({ searchParams } : any) {
   const { organization } = useOrganization();
   const [checkRedirect, setRedirect] = useState<boolean>(false);
   const router = useRouter();
