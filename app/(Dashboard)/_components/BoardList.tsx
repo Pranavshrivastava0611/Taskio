@@ -1,19 +1,18 @@
 "use client";
 
 import React from "react";
-import Image from "next/image";
+
 import Empty_search from "./empty-search";
-import { useParams } from "next/navigation";
-import EmptyOrg from "./EmptyOrg";
+
 import Empty_F from "./empty-favourite";
 import Empty_all from "./empty-all";
-import { useSearchParams } from "next/navigation";
+
 import { useQuery } from "convex/react";
 import { api } from "@/convex/_generated/api";
 import { useOrganization } from "@clerk/nextjs";
-import { query } from "@/convex/_generated/server";
+
 import { BoardCard } from "./board-card";
-import Overlay from "./board-card/Overlay";
+
 import NewBoardButton from "./NewBoardButton";
 
 export const BoardList = ({ searchParams }: any) => {
